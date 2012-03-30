@@ -15,9 +15,10 @@ main: ${OBJ}
 	 	  -e '/^$$/ d' -e 's/$$/ :/' < $*.P >> $*.d; \
 	  rm -f $*.P
 
+archive:
+	tar -cvzf p1.tar.gz *.h *.cpp README Makefile
+
 clean:
 	-rm *.o *.d *~
 
-archive:
-	tar -cvf theprogram.tar ${SRC}
 
